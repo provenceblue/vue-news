@@ -1,17 +1,15 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <tool-bar></tool-bar>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Toolbar from './components/Toolbar.vue';
 export default {
-  name: 'App',
   components: {
-    HelloWorld
+    'tool-bar': Toolbar,
   }
 }
 </script>
@@ -26,3 +24,4 @@ export default {
   margin-top: 60px;
 }
 </style>
+/
