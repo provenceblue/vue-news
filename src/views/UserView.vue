@@ -6,7 +6,10 @@
 
 <script>
 export default {
-    
+    created(){
+        const userName = this.$route.prams.id;
+
+    }
 };
 </script>
 
