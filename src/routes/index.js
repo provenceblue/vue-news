@@ -32,7 +32,7 @@ export const router = new VueRouter({
             component: UserView
         },
         {
-            path: '/:url',
+            path: '/item/:id',
             component: ItemView
         },
         

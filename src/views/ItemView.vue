@@ -1,26 +1,46 @@
 <template>
-    <div>
-        <p>{{itemInfo.title}}</p>
-        <p>{{itemInfo.user}}</p>
-        <p>{{itemInfo.time_ago}}</p>
+    <div class="item-wrap">
+        <section>
+            <div class="user-container">
+                <div>
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="user-description">
+                   <router-link :to="`/user/${fetchedItem.user}`">{{fetchedItem.user}}</router-link>
+                    <div class="time">{{fetchedItem.time_ago}}</div>
+                </div>
+               
+            </div>
+             <h2>{{fetchedItem.title}}</h2>
+        </section>
+        <section>
+            <div v-html="fetchedItem.content"></div>
+        </section>
     </div>
 </template>
 
 <script>
+import {mapGetters} from 'vuex';
 export default {
     computed:{
-        itemInfo(){
-            return this.$store.state.item;
-        }
+        ...mapGetters(['fetchedItem']),
+        // fetchedItem(){
+        //     return this.$store.state.item;
+        // }
     },
     created() {
-        const itemNo = this.$route.query.id;
-        this.$store.dispatch('FETCH_ITEM',itemNo);
+        const itemId = this.$route.params.id;
+        this.$store.dispatch('FETCH_ITEM',itemId);
 
     },
 };
 </script>
 
 <style scoped>
+.item-wrap{text-align:left;padding:0.5rem;}
+.user-container{display:flex;align-items:center;padding:0.5rem;}
+.fa-user{font-size:2.5rem;}
+.user-description{padding-left:8px;}
+.time{font-size:0.7rem;}
 
 </style>
