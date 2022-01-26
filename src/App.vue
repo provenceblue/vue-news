@@ -22,7 +22,7 @@ body{padding:0;margin:0;}
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  
   color: #2c3e50;
   margin-top: 60px;
 }
@@ -32,4 +32,7 @@ body{padding:0;margin:0;}
 .page-enter, .page-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
+a {text-decoration: none;color:#34495e;}
+a.router-link-exact-active{text-decoration:underline;}
+a:hover{color:#42b883;text-decoration:underline;}
 </style>
