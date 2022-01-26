@@ -12,11 +12,16 @@ function fetchJobsList() {
 function fetchAskList() {
     return axios.get(`${config.baseUrl}ask/1.json`);
 }
-function fetchUserInfo(name){
-
+function fetchUserInfo(username){
+    return axios.get(`${config.baseUrl}user/${username}.json`);
+}
+function fetchItemInfo(iteminfo){
+    return axios.get(`${config.baseUrl}item/${iteminfo}.json`);
 }
 export {
     fetchNewsList,
     fetchJobsList,
-    fetchAskList
+    fetchAskList,
+    fetchUserInfo,
+    fetchItemInfo,
 }
