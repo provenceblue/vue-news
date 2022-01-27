@@ -9,12 +9,8 @@
                     <p class="news-title">
                         <a :href="item.url">{{item.title}}</a>
                     </p>
-                    <small class="link-text">by <router-link :to="`/user/${item.user}`" class="link-text">{{item.user}}</router-link></small>
+                    <small class="link-text"> {{item.time_ago}} by <router-link :to="`/user/${item.user}`" class="link-text">{{item.user}}</router-link></small>
                 </div>
-                <!-- <a :href="item.url">
-                    {{item.title}}
-                </a>
-                <small>{{item.time_ago}} by <router-link :to="`/user/${item.user}`">{{item.user}}</router-link></small> -->
             </li>
         </ul>
     </div>
