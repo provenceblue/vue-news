@@ -4,11 +4,15 @@
             <i class="fas fa-user"></i>
         </div>
         <div class="user-description">
+            <!-- <div>userName : {{info.id}}</div> -->
+            <slot name="username"></slot>
             <!-- <router-link :to="`/user/${userInfo.user}`">{{userInfo.user}}</router-link>
             <div class="time">{{userInfo.time_ago}}</div> -->
-            <p>name : {{userInfo.id}}</p>
-            <p>karma : {{userInfo.karma}}</p>
-            <p>created : {{userInfo.created}}</p>
+            
+            <div class="time">
+                <!-- time : {{info.created}} -->
+                <slot name="time"></slot>
+            </div>
         </div>
         
     </div>
@@ -16,11 +20,9 @@
 
 <script>
 export default {
-    computed: {
-        userInfo(){
-            return this.$store.state.user;
-        }
-    },
+    props: {
+        info : Object
+    }
     
 };
 </script>
