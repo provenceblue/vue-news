@@ -13,6 +13,7 @@
                 <!-- time : {{info.created}} -->
                 <slot name="time"></slot>
             </div>
+            <slot name="karma"></slot>
         </div>
         
     </div>
