@@ -8,6 +8,7 @@ import ItemView from '../views/ItemView.vue';
 import createListView from '../views/CreateListView.js';
 import bus from '../utils/bus.js';
 import {store} from '../store/index.js';
+import testView from '../views/test.vue';
 
 Vue.use(VueRouter);
 
@@ -71,6 +72,10 @@ export const router = new VueRouter({
         {
             path: '/item/:id',
             component: ItemView
+        },
+        {
+            path: '/test',
+            component: testView
         },
         
     ]
