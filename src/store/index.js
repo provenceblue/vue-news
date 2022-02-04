@@ -7,20 +7,20 @@ import actions from './actions.js';
 Vue.use(Vuex);
 export const store = new Vuex.Store({
   state: {
-    // news: [],
-    // ask:[],
-    // jobs:[],
+    news: [],
+    ask:[],
+    jobs:[],
     user: {},
     item: {},
     list: [],
   },
   getters: {
-    // fetchedNews(state){
-    //   return state.news
-    // },
-    // fetchedAsk(state){
-    //   return state.ask
-    // },
+    fetchedNews(state){
+      return state.news
+    },
+    fetchedAsk(state){
+      return state.ask
+    },
     fetchedItem(state){
       return state.item
     }
