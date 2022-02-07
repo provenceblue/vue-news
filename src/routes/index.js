@@ -9,6 +9,7 @@ import createListView from '../views/CreateListView.js';
 import bus from '../utils/bus.js';
 import {store} from '../store/index.js';
 import testView from '../views/test.vue';
+import chartView from '../views/chart.vue';
 
 Vue.use(VueRouter);
 
@@ -76,6 +77,10 @@ export const router = new VueRouter({
         {
             path: '/test',
             component: testView
+        },
+        {
+            path: '/chart',
+            component: chartView
         },
         
     ]
